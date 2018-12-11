@@ -3,6 +3,11 @@ package com.exam;
 public class Order {
 	Order [] order = new Order[2];
 	int value;
+	public Order() {
+		for (int i = 1; i <3; i++) {
+			order[i] = new Order(i);
+		}
+	}
 	public Order(int value) {
 				this.value = value;
 	}
@@ -12,14 +17,12 @@ public class Order {
 		String [] p = {"37","285"};
 		String [] q = {"2", "1"};
 		int number = value;
-		return o[number] + o[number] + p[number] + q[number];
+		return o[number] + d[number] + p[number] + q[number];
+	}
 		
-	public Order() {
-		for (int i = 1; i <3; i++) {
-			order[i] = new Order(i);
-		}
 	
-}
+	
+
 
 
 
@@ -27,8 +30,8 @@ public class Order {
 	
 	
 	public void print() {
-		for (int i=0 ; i < 3; i++ ) {
-		System.out.println(order[i].value);
+		for (int i=1 ; i < 3; i++ ) {
+		System.out.println(order[i].get());
 		}
 	}
 }
