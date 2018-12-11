@@ -1,21 +1,34 @@
 package com.exam;
 
 public class Order {
-	String origin;
-	String destination;
-	int price;
-	int quantity;
-	
-	public void Ticket (String origin, String destination, int price , int quantity){
-		this.origin = origin;
-		this.destination = destination;
-		this.price = price;
-		this.quantity = quantity;
+	Order [] order = new Order[2];
+	int value;
+	public Order(int value) {
+				this.value = value;
+	}
+	public String get() {
+		String [] o = {"Taipei","TaiChung"};
+		String [] d = {"TaiChung", "Taipei"};
+		String [] p = {"37","285"};
+		String [] q = {"2", "1"};
+		int number = value;
+		return o[number] + o[number] + p[number] + q[number];
 		
-	}
-
-	public void print(){
-	//	System.out.print(ticket() + tatal);
-	}
+	public Order() {
+		for (int i = 1; i <3; i++) {
+			order[i] = new Order(i);
+		}
 	
+}
+
+
+
+	
+	
+	
+	public void print() {
+		for (int i=0 ; i < 3; i++ ) {
+		System.out.println(order[i].value);
+		}
+	}
 }
